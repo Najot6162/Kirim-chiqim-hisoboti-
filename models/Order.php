@@ -27,6 +27,7 @@ class Order extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
+            [['date','order_number'],'required'],
             [['date', 'order_number'], 'string', 'max' => 255],
         ];
     }

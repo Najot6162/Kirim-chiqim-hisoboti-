@@ -27,6 +27,7 @@ class Purchase extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
+            [['date','number'],'required'],
             [['date', 'number'], 'string', 'max' => 255],
         ];
     }

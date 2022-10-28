@@ -29,6 +29,7 @@ class SellProduct extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
+            [['sell_id', 'product_id', 'amount','price'], 'required'],
             [['sell_id', 'product_id', 'amount','price'], 'integer'],
         ];
     }

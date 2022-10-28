@@ -30,6 +30,7 @@ class PurchaseProduct extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
+            [['purchase_id', 'product_id', 'amount'],'required'],
             [['purchase_id', 'product_id', 'amount'], 'integer'],
             [['price'], 'string', 'max' => 255],
         ];
